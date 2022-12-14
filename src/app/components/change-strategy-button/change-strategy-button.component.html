@@ -1,0 +1,10 @@
+<button mat-button [matMenuTriggerFor]="menu">Change</button>
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    *ngFor="let item of menuItems"
+    (click)="onStrategyMenuItemSelect(item.strategy)"
+  >
+    {{ item.label }}
+  </button>
+</mat-menu>
